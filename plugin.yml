@@ -2,7 +2,7 @@ name: BuildBattle
 main: Kai\BB
 api: [3.0.0]
 version: 1.0.0
-author: DragonPlayzMC Fixed MCCreeperYT
+author: DragonPlayzMC Fixed MCCreeperYT Translator By HaykalPRO
 
 commands:
     bb:
