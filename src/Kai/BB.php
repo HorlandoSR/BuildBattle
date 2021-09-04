@@ -37,7 +37,7 @@ class BB extends PluginBase implements Listener {
 	
 	public function onEnable()
 	{
-		$this->getLogger()->notice(TE::AQUA . "BuildBattle by DragonPlayzMC and fixed by MCCreeperYT");
+		$this->getLogger()->notice(TE::AQUA . "BuildBattle by DragonPlayzMC and fixed by MCCreeperYT Translator And Remake By HaykalPRO");
                 $this->getServer()->getPluginManager()->registerEvents($this ,$this);
 		@mkdir($this->getDataFolder());
 		$config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
@@ -62,8 +62,8 @@ class BB extends PluginBase implements Listener {
 	}
         
         public function onDisable() {
-            $config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
-            $slots = new Config($this->getDataFolder() . "/slots.yml", Config::YAML);
+            $config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+            $slots = new Config($this->getDataFolder() . "slots.yml", Config::YAML);
             if($config->get("arenas")!=null)
             {
                     $this->arenas = $config->get("arenas");
