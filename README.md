@@ -6,9 +6,9 @@ Spanish => English
 This BuildBattle V1
 
 V2: 
-Custom Message
+Custom Message And
 BossBar
 
 V3:
-Leaderboard
+Leaderboard And
 Scoreboard
