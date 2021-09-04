@@ -49,7 +49,7 @@ class BB extends PluginBase implements Listener {
 		{
 			$this->getServer()->loadLevel($lev);
 		}
-                $temas = array("Pájaro - Bird","Pez - Fish","Auto - Car","Dragón","Internet","Rana - Frog","Mario Bros","Perro - Dog","Mago - Mage","Tractor","Bote - Boat","Cascada - WaterFall","Tigre - Tiger","Avión - AirPlane","Superhéroe","Fútbol - Soccer","MCPE Mobs-Monsters");
+                $temas = array("Bird","Fish","Car","Dragon","Mountains","Frog","Mario Bros","Dog","Home Medieval","Tractor","Boat","WaterFall","Tiger","AirPlane","statue","Soccer","Fire extinguisher");
 		if($config->get("temas")==null)
 		{
 			$config->set("temas",$temas);
@@ -74,7 +74,7 @@ class BB extends PluginBase implements Listener {
                         $slots->set("slot".$i.$arena, 0);
                     }
                     $slots->save();
-                    $config->set($arena . "inicio", 0);
+                    $config->set($arena . "beginning", 0);
                     $config->save();
                     $points = new Config($this->getDataFolder() . "/puntos".$arena.".yml", Config::YAML);
                     foreach($points->getAll() as $key => $w){
@@ -222,7 +222,7 @@ class BB extends PluginBase implements Listener {
                     }
                     else
                     {
-                        $player->sendTip(TE::BOLD.TE::RED."You cant vote your own Plot");
+                        $player->sendTip(TE::BOLD.TE::RED."You Cant Vote Your Own Plot");
                     }
                 }
             }
@@ -464,7 +464,7 @@ class BB extends PluginBase implements Listener {
 			$player->sendMessage($this->prefix . "Spawn Lobby Registrered!");
 			$config->set("arenas",$this->arenas);
                         $config->set($this->currentLevel . "Start", 0);
-			$player->sendMessage($this->prefix . "Touch a spawn to registered Arena!");
+			$player->sendMessage($this->prefix . "Touch A Spawn To Registered Arena!");
 			$spawn = $this->getServer()->getDefaultLevel()->getSafeSpawn();
 			$this->getServer()->getDefaultLevel()->loadChunk($spawn->getFloorX(), $spawn->getFloorZ());
 			$player->teleport($spawn,0,0);
